@@ -1,29 +1,26 @@
-# Change Review
+# change-review
 
-> Review a diff for correctness and regression risk, reporting only actionable findings.
+> Focused review of diffs for concrete bugs and regressions.
 
-## Install
+## Install in Codex
 
-In Codex, add the [GhosTnever Codex Toolkit](https://github.com/GhosTnever-lkm/ghosTnever-codex-toolkit) marketplace, then install **Change Review**.
+Add this repository as a plugin marketplace, then install the plugin:
 
-You can also clone this repository and add it as a local marketplace:
-
-```text
-codex plugin marketplace add .\path\to\ghosTnever-codex-toolkit
-codex plugin add change-review --marketplace ghosTnever-codex-toolkit
+```powershell
+codex plugin marketplace add GhosTnever-lkm/change-review
+codex plugin add change-review --marketplace change-review
 ```
 
-## Try it
+To inspect the marketplace after adding it, run codex plugin list. Codex may ask you to restart or reload plugins before the skill becomes available.
 
-- "Review my current changes for bugs."
-- "Check this commit for regression risks."
-- "Review the diff around error handling only."
+## Use it
+
+Start a Codex task that matches the skill's purpose. The plugin instructions live in skills/ and are included in the marketplace source for inspection.
 
 ## Scope
 
-This plugin contains a focused Codex skill. It does not install external services or run background processes. Review repository guidance and user authorization before taking actions.
+This is a focused Codex skill. It has no external service, background process, or credential requirement. See the skill file for its workflow and limits.
 
 ## License
 
 MIT. See [LICENSE](LICENSE).
-
