@@ -1,6 +1,6 @@
 {
   "name": "change-review",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Review a diff for correctness and regression risk, reporting only actionable findings.",
   "author": {
     "name": "GhosTnever"
