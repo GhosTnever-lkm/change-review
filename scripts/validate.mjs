@@ -88,7 +88,7 @@ export function validate(rootArg = process.cwd()) {
     if (entries.length !== 1) errors.push({ code: 'MARKETPLACE_ENTRY', message: `marketplace.json must list plugin "${name}" exactly once (found ${entries.length})` });
     for (const p of entries) {
       const src = p.source && p.source.path;
-      if (typeof src !== 'string' || src.replace(/^\.\/?/, '').replace(/\/+$/, '') !== '') errors.push({ code: 'MARKETPLACE_SOURCE', message: `marketplace source.path must be "./", got ${JSON.stringify(src)}` });
+      if (src !== './' && src !== '.') errors.push({ code: 'MARKETPLACE_SOURCE', message: `marketplace source.path must be "." or "./", got ${JSON.stringify(src)}` });
     }
   }
 

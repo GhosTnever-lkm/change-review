@@ -49,6 +49,17 @@ test('rejects skill paths outside the repository', () => withCopy((dir) => {
   assert.ok(codes(validate(dir)).includes('SKILL_PATH'));
 }));
 
+test('rejects absolute marketplace source paths', () => {
+  for (const sourcePath of ['/', '////']) withCopy((dir) => {
+    edit(dir, '.agents/plugins/marketplace.json', (t) => {
+      const j = JSON.parse(t);
+      j.plugins[0].source.path = sourcePath;
+      return JSON.stringify(j);
+    });
+    assert.ok(codes(validate(dir)).includes('MARKETPLACE_SOURCE'));
+  });
+});
+
 test('rejects invalid JSON and missing files without crashing', () => withCopy((dir) => {
   edit(dir, '.agents/plugins/marketplace.json', () => '{ not json');
   assert.ok(codes(validate(dir)).includes('INVALID_JSON'));

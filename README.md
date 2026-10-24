@@ -7,11 +7,11 @@
 Add this repository as a plugin marketplace, then install the released plugin:
 
 ```powershell
-codex plugin marketplace add GhosTnever-lkm/change-review@v1.0.3
+codex plugin marketplace add GhosTnever-lkm/change-review@v1.0.4
 codex plugin add change-review --marketplace change-review
 ```
 
-The marketplace source is pinned to `v1.0.3`, so installation uses the matching tagged plugin instead of whatever is currently on the default branch. Codex may ask you to restart or reload plugins before the skill becomes available.
+The marketplace source is pinned to `v1.0.4`, so installation uses the matching tagged plugin instead of whatever is currently on the default branch. Codex may ask you to restart or reload plugins before the skill becomes available.
 
 ## Use it
 

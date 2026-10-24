@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.4
+
+- Reject absolute marketplace source paths instead of normalizing slash-only paths to the repository root.
+- Add regression coverage for absolute and slash-only source paths.
+
 ## v1.0.3
 
 - Add a dependency-free `scripts/validate.mjs` check for VERSION, plugin manifest, skill frontmatter, marketplace entry, README install pin, CHANGELOG entry, and full MIT license text.
